@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Exam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container, .login-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .section {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .section h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 5px;
+            cursor: pointer;
+            text-align: left; /* Aligning headings to the left */
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: none;
+        }
+
+        ul.active {
+            display: block;
+        }
+
+        ul li {
+            background-color: #f1f1f1;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        ul li:hover {
+            background-color: #e0e0e0;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .login-container {
+            display: none;
+        }
+
+        .login-container input[type="text"], 
+        .login-container input[type="password"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .login-container button {
+            padding: 10px 20px;
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .login-container button:hover {
+            background-color: #004494;
+        }
+
+        .logout-container {
+            text-align: right;
+            margin-top: 10px;
+        }
+
+        .logout-container button {
+            padding: 5px 10px;
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .logout-container button:hover {
+            background-color: #c9302c;
+        }
+
+        #userPic {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            display: block;
+            margin: 10px auto;
+            object-fit: cover; /* Ensures the image covers the entire space */
+        }
+
+        #greeting {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        #greeting span {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container" id="loginContainer">
+        <h1>Login</h1>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+		<h5>Copyright ©2024; Designed by Xalim</h5>
+    </div>
+
+    <div class="container" id="contentContainer">
+        <div class="logout-container">
+            <button onclick="logout()">Logout</button>
+        </div>
+        <h1>Final MCQ Total Test</h1>
+        <div id="greeting">
+            <img src="https://via.placeholder.com/150" alt="User" id="userPic">
+            <span id="greetingText"></span>
+        </div>
+        <div class="section">
+            <h2>+ Surgery (252)</h2>
+            <ul>
+                <li><a href="https://xalimusa.github.io/sur-all/" target="_blank">SUR - All (252) </a></li>
+                <li><a href="https://xalimusa.github.io/sur-a/" target="_blank">SUR - Part A (156)</a></li>
+                <li><a href="https://xalimusa.github.io/sur-b/" target="_blank">SUR - Part B (43)</a></li>
+                <li><a href="https://xalimusa.github.io/sur-c/" target="_blank">SUR - Part C (53)</a></li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>+ MED (342)</h2>
+            <ul>
+                <li><a href="https://xalimusa.github.io/med-all/" target="_blank">MED - All (342) </a></li>
+                <li><a href="https://xalimusa.github.io/med-a/" target="_blank">MED - Part A (102)</a></li>
+                <li><a href="https://xalimusa.github.io/med-b/" target="_blank">MED - Part B (109)</a></li>
+                <li><a href="https://xalimusa.github.io/med-c/" target="_blank">MED - Part C (131)</a></li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>+ OBG (389)</h2>
+            <ul>
+                <li><a href="https://xalimusa.github.io/obg-all/" target="_blank">OBG - All (389) </a></li>
+                <li><a href="https://xalimusa.github.io/obg-a/" target="_blank">OBG - Part A (148)</a></li>
+                <li><a href="https://xalimusa.github.io/obg-b/" target="_blank">OBG - Part B (30)</a></li>
+                <li><a href="https://xalimusa.github.io/obg-c/" target="_blank">OBG - Part C (211)</a></li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>+ Basic Sciences (478)</h2>
+            <ul>
+                <li><a href="https://xalimusa.github.io/bs-all/" target="_blank">BS - All (478) </a></li>
+                <li><a href="https://xalimusa.github.io/bs-a/" target="_blank">BS - Part A (100)</a></li>
+                <li><a href="https://xalimusa.github.io/bs-b/" target="_blank">BS - Part B (100)</a></li>
+                <li><a href="https://xalimusa.github.io/bs-c/" target="_blank">BS - Part C (100)</a></li>
+                <li><a href="https://xalimusa.github.io/bs-d/" target="_blank">BS - Part D (100)</a></li>
+                <li><a href="https://xalimusa.github.io/bs-e/" target="_blank">BS - Part E (78)</a></li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>+ PED (177)</h2>
+            <ul>
+                <li><a href="https://xalimusa.github.io/ped-all/" target="_blank">PED - All (177) </a></li>
+                <li><a href="https://xalimusa.github.io/ped-a/" target="_blank">PED - Part A (59)</a></li>
+                <li><a href="https://xalimusa.github.io/ped-b/" target="_blank">PED - Part B (93)</a></li>
+                <li><a href="https://xalimusa.github.io/ped-c/" target="_blank">PED - Part C (25)</a></li>
+            </ul>
+        </div>
+		        <div class="section">
+            <h2>** Random </h2>
+            <ul>
+				<li><a href="https://xalimusa.github.io/r-p1/" target="_blank">All Part 1 MCQ(1000) </a></li>
+				<li><a href="https://xalimusa.github.io/r-p2/" target="_blank">All Part 2 MCQ(638) </a></li>
+                <li><a href="https://xalimusa.github.io/r-sur/" target="_blank">SUR - All (252) </a></li>
+                <li><a href="https://xalimusa.github.io/r-med/" target="_blank">MED - All (342)</a></li>
+                <li><a href="https://xalimusa.github.io/r-obg/" target="_blank">OBG - All (389)</a></li>
+                <li><a href="https://xalimusa.github.io/r-bs/" target="_blank">BS - All (478)</a></li>
+				<li><a href="https://xalimusa.github.io/r-ped/" target="_blank">PED - All (177)</a></li>
+            </ul>
+        </div>
+    </div>
+	
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.querySelector('h2').addEventListener('click', function() {
+                    this.nextElementSibling.classList.toggle('active');
+                });
+            });
+
+            checkLogin();
+
+            // Simulate real-time check for duplicate login
+            setInterval(checkDuplicateLogin, 5000);
+        });
+
+        function checkLogin() {
+            const loginContainer = document.getElementById('loginContainer');
+            const contentContainer = document.getElementById('contentContainer');
+            const username = sessionStorage.getItem('username');
+            const loggedIn = sessionStorage.getItem('loggedIn');
+
+            if (loggedIn && username) {
+                loginContainer.style.display = 'none';
+                contentContainer.style.display = 'block';
+                updateGreeting(username);
+            } else {
+                loginContainer.style.display = 'block';
+                contentContainer.style.display = 'none';
+            }
+        }
+
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Updated credentials for demonstration
+            const credentials = {
+                'Xalim': '1213',
+                'Eric': '1122',
+                'liheang': '2233',
+                'lyly': '3344',
+                'lida': '4455',
+				'Thep': '5566',
+				'Deth': '6677',
+				'Mey': '7788',
+				'Manich': '8899',
+				'Soyien': '9911',
+				'Namheang': '9988',
+				'Demo': '1111',
+            };
+
+            if (credentials.hasOwnProperty(username) && credentials[username] === password) {
+                localStorage.setItem('currentUser', username);
+                sessionStorage.setItem('username', username);
+                sessionStorage.setItem('loggedIn', true);
+                checkLogin();
+            } else {
+                alert('Invalid username or password');
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('currentUser');
+            sessionStorage.removeItem('username');
+            sessionStorage.removeItem('loggedIn');
+            checkLogin();
+        }
+
+        function checkDuplicateLogin() {
+            const currentUser = localStorage.getItem('currentUser');
+            const sessionUser = sessionStorage.getItem('username');
+
+            if (currentUser && sessionUser && currentUser !== sessionUser) {
+                alert('You have been logged out because your account was accessed from another device.');
+                logout();
+            }
+        }
+
+        function updateGreeting(username) {
+            const greetingText = document.getElementById('greetingText');
+            greetingText.innerHTML = `Hello, ${username}`;
+            
+            // Update user picture based on username
+            const userPic = document.getElementById('userPic');
+            if (username === 'Xalim') {
+                userPic.src = 'https://i.pinimg.com/736x/0e/29/58/0e29581506deb08b83f3f7ac5c742330.jpg';
+            } else if (username === 'Eric') {
+                userPic.src = 'https://i.pinimg.com/736x/01/dc/22/01dc22ff329664734f2ab2cc73438edd.jpg';
+            } else if (username === 'liheang') {
+                userPic.src = 'https://i.pinimg.com/736x/08/cf/d5/08cfd523d8ae4eb3b41add705ce1116b.jpg';
+            } else if (username === 'lyly') {
+                userPic.src = 'https://i.pinimg.com/736x/3f/1f/94/3f1f945ab49c66f12ffe686d56085e9b.jpg';
+            } else if (username === 'lida') {
+                userPic.src = 'https://i.pinimg.com/736x/95/0f/7b/950f7b7b3a9f7e67943a39920331ed10.jpg';
+            } else if (username === 'Thep') {
+                userPic.src = 'https://i.pinimg.com/736x/ae/ce/93/aece933a01de3734b1781c90020cd239.jpg';
+            } else if (username === 'Deth') {
+                userPic.src ='https://i.pinimg.com/736x/38/5f/a4/385fa4eb9770bc04164de78d9ec8c2f2.jpg';
+            } else if (username === 'Demo') {
+                userPic.src = 'https://img.freepik.com/premium-vector/boy-girl-are-working-as-doctor_81761-420.jpg';
+            } else if (username === 'Mey') {
+				userPic.src = 'https://i.pinimg.com/736x/92/c3/c5/92c3c5e1cea14ead97535e7128795fb8.jpg';
+            } else if (username === 'Manich') {
+                userPic.src = 'https://i.pinimg.com/736x/20/30/65/203065160f7c6f873ce4702deca47c32.jpg';
+            
+			} else if (username === 'Soyien') {
+                userPic.src = 'https://i.pinimg.com/1200x/68/43/e5/6843e5601adc6335b2c586ff062045f0.jpg';
+            
+			} else if (username === 'Namheang') {
+                userPic.src = 'https://i.pinimg.com/736x/e4/24/ab/e424ab59ddaf4ec29359255489fa2d3c.jpg';
+			}
+			else {
+                userPic.src = 'https://via.placeholder.com/150';
+            }
+        }
+    </script>
+</body>
+</html>
