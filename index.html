@@ -159,7 +159,7 @@
         <div class="logout-container">
             <button onclick="logout()">Logout</button>
         </div>
-        <h1>Final MCQ Total Test</h1>
+        <h1>MCQ  TEST</h1>
         <div id="greeting">
             <img src="https://via.placeholder.com/150" alt="User" id="userPic">
             <span id="greetingText"></span>
@@ -274,7 +274,7 @@
 				'Manich': '8899',
 				'Soyien': '9911',
 				'Namheang': '9988',
-				'Demo': '1111',
+				'Friend': '1111',
             };
 
             if (credentials.hasOwnProperty(username) && credentials[username] === password) {
@@ -306,7 +306,7 @@
 
         function updateGreeting(username) {
             const greetingText = document.getElementById('greetingText');
-            greetingText.innerHTML = `Believe in yourself, ${username}`;
+            greetingText.innerHTML = `GOOD LUCK, ${username}`;
             
             // Update user picture based on username
             const userPic = document.getElementById('userPic');
@@ -324,7 +324,7 @@
                 userPic.src = 'https://i.pinimg.com/736x/ae/ce/93/aece933a01de3734b1781c90020cd239.jpg';
             } else if (username === 'Deth') {
                 userPic.src ='https://i.pinimg.com/736x/38/5f/a4/385fa4eb9770bc04164de78d9ec8c2f2.jpg';
-            } else if (username === 'Demo') {
+            } else if (username === 'Friend') {
                 userPic.src = 'https://img.freepik.com/premium-vector/boy-girl-are-working-as-doctor_81761-420.jpg';
             } else if (username === 'Mey') {
 				userPic.src = 'https://i.pinimg.com/736x/92/c3/c5/92c3c5e1cea14ead97535e7128795fb8.jpg';
